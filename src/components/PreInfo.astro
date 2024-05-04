@@ -1,0 +1,23 @@
+---
+import BentoItem from "./BentoItem.astro"
+---
+
+<section
+  class={`
+    w-full h-full
+    grid lg:grid-col-10 auto-rows-[30rem] gap-4 
+    mx-auto p-6 md:p-12 lg:p-20
+    `}
+>
+  <BentoItem
+    class="top-0 w-[1200px] h-full col-span-10 -left-[25%] md:col-span-5 bg-neon-green "
+    title="About Me"
+  >
+    <p slot="content"
+    class="max-w-xl text-base md:text-lg text-black-blue font-DmSans-Regular">
+      Poner texto aca
+      <a href="/AboutMe"><button class="px-4 py-2 text-lg rounded-md bg-dark-blue text-neon-green font-DmSans-Bold">More...</button></a>
+    </p>
+    
+  </BentoItem>
+</section>

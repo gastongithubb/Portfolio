@@ -1,0 +1,138 @@
+<header
+  id="landing-header"
+  class="fixed top-0 z-40 flex items-center justify-between w-full px-10 py-3 text-white"
+>
+  <nav class="justify-center hidden xl:block sm:hidden">
+    <ul
+      class="flex text-sm [&>li>a]:transition-colors [&>li>a]:duration-500 [&>li>a]:text-current [&>li>a]:font-medium [&>li>a]:inline-block [&>li>a]:px-4 [&>li>a]:py-2"
+    >
+      <li class="hover:text-lime-300"><a href="/">Home</a></li>
+      <li class="hover:text-lime-300"><a href="/AboutMe">About Me</a></li>
+      <li class="hover:text-lime-300"><a href="/Projects">Projects</a></li>
+      <li class="hover:text-lime-300"><a href="/Contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- <nav
+    id="modal-menu"
+    class="fixed top-0 bottom-0 left-0 right-0 flex flex-col bg-black xl:hidden"
+  >
+    <button id="close-btn" class="flex justify-end w-screen p-5">
+      <img class="h-6 text-white" src="/close-icon.svg" alt="close image" />
+    </button>
+    <ul
+      class="flex flex-col mt-4 [&>li>a]:transition-colors [&>li]:m-3 [&>li>a]:flex [&>li>a]:justify-between [&>li>a]:duration-200 [&>li>a]:text-white [&>li>a]:font-medium [&>li>a]:px-6 [&>li>a]:py-3 [&>li>a]:rounded-md [&>li>a]:w-full"
+    >
+      <li>
+        <a class="hover:[#D5FF3F]" href="#home">
+          Home <img class="h-5" alt="arrow icon" src="/" /></a
+        >
+      </li>
+      <li>
+        <a class="hover:" href="#model-s"
+          >About Me<img class="h-5" alt="arrow icon" src="/AboutMe" /></a>
+      </li>
+      <li>
+        <a class="hover:" href="#model-3"
+          >Projects<img class="h-5" alt="arrow icon" src="/Projects" /></a>
+      </li>
+      <li>
+        <a class="hover:" href="#model-x"
+          >Contact<img class="h-5" alt="arrow icon" src="/Contact" /></a>
+      </li>
+    </ul>
+  </nav>
+
+  <div
+    id="menu-backdrop"
+    class={`
+      absolute bg-black/5 backdrop-blur-lg rounded
+      translate-x-[var(--left)] translate-y-[var(--top)]
+      left-0 top-0
+      w-[var(--width)] h-[var(--height)]
+      transition-all duration-500
+      ease-in-out opacity-0 -z-10
+    `}
+  >
+  </div> -->
+</header>
+
+
+
+<!-- dropdownMenu.ts:
+<script>
+  const menuBtn = document.getElementById("menu-btn") as HTMLElement;
+  const modalMenu = document.querySelector("#modal-menu") as HTMLElement;
+  const menuItems = modalMenu.querySelectorAll("li>a");
+  const closeBtn = document.querySelector("#close-btn") as HTMLElement;
+
+  export function toggleDropdownMenu() {
+    modalMenu.classList.toggle("hidden");
+  }
+
+  menuBtn.addEventListener("click", toggleDropdownMenu);
+
+  closeBtn.addEventListener("click", toggleDropdownMenu);
+
+  menuItems.forEach((Item) => {
+    Item.addEventListener("click", toggleDropdownMenu);
+  });
+</script>
+
+
+menuBackdrop.ts:
+<script>
+  const listItem = document.querySelectorAll(
+    "#landing-header li"
+  ) as NodeListOf<HTMLElement>;
+  const menuBackDrop = document.querySelector("#menu-backdrop") as HTMLElement;
+
+  listItem.forEach((item) => {
+    item.addEventListener("mouseenter", () => {
+      const { left, top, width, height } = item.getBoundingClientRect();
+
+      menuBackDrop.style.setProperty("--left", `${left}px`);
+      menuBackDrop.style.setProperty("--top", `${top}px`);
+      menuBackDrop.style.setProperty("--width", `${width}px`);
+      menuBackDrop.style.setProperty("--height", `${height}px`);
+
+      menuBackDrop.style.opacity = "1";
+      menuBackDrop.style.visibility = "visible";
+    });
+
+    item.addEventListener("mouseleave", () => {
+      menuBackDrop.style.opacity = "0";
+      menuBackDrop.style.visibility = "hidden";
+    });
+  });
+</script>
+
+
+intersectionObserver.ts:
+
+<script>
+  const headerEl = document.querySelector("#landing-header") as HTMLElement;
+
+  const observerOptions = {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.9,
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      const { isIntersecting } = entry;
+      if (isIntersecting) {
+        const color = entry.target.getAttribute("data-header-color");
+        if (color) {
+          headerEl.style.color = color;
+        }
+      }
+    });
+  }, observerOptions);
+
+  const sectionElements = document.querySelectorAll(
+    ".landing-section"
+  ) as NodeListOf<HTMLElement>;
+  sectionElements.forEach((section) => observer.observe(section));
+</script> -->
