@@ -1,3 +1,4 @@
+import animations from 'tailwindcss-animated'
 /** @type {import('tailwindcss').Config} */
 export default {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
@@ -14,6 +15,7 @@ export default {
 				"neon-green": "#d5ff3f",
 				"black-blue": "#161b22",
 				"dark-blue": "#242938",
+				"coder-house": "#EAFE69",
 			},
 			spacing: {},
 			width: {},
@@ -24,5 +26,7 @@ export default {
 			maxHeight: {},
 		  },
 	},
-	plugins: [],
+	plugins: [
+		animations,
+	],
 }

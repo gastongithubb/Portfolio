@@ -1,27 +1,52 @@
-<div class="self-stretch h-[732px] flex-col justify-start items-center gap-5 flex">
-    <div class="pl-[58px] pr-[3px] pt-[55.28px] pb-[75.72px] bg-lime-300 rounded-[10px] justify-end items-center inline-flex">
+
+    <div class="self-stretch h-[732px] flex-col justify-start items-center gap-5 flex">
+      <div class="pl-[58px] pr-[3px] pt-[55.28px] pb-[75.72px] bg-lime-300 rounded-[10px] justify-end items-center inline-flex">
         <div class="self-stretch justify-start items-start gap-[260px] inline-flex">
-            <div class="inline-flex flex-col items-start justify-start">
-                <div class="text-gray-900 text-[141.14px] font-normal font-['Bebas Neue'] leading-[150.45px]">Get in Touch</div>
-                <div class="w-[465px] text-gray-900 text-[25px] font-normal font-['DM Sans']">If you are interested in my work or want to provide feedback about this website, I am open to exchanging ideas .</div>
-            </div>
-            <div class="py-2.5 flex-col justify-start items-start gap-3.5 inline-flex">
-                <div class="flex-col justify-start items-start gap-[5px] flex">
-                    <div class="text-gray-900 text-[25px] font-bold font-['DM Sans']">Name</div>
-                    <div class="w-[589px] h-[51px] bg-white rounded-[10px]"></div>
-                </div>
-                <div class="flex-col justify-start items-start gap-[5px] flex">
-                    <div class="text-gray-900 text-[25px] font-bold font-['DM Sans']">Email</div>
-                    <div class="w-[589px] h-[51px] bg-white rounded-[10px]"></div>
-                </div>
-                <div class="flex-col justify-start items-start gap-[5px] flex">
-                    <div class="text-gray-900 text-[25px] font-bold font-['DM Sans']">Message</div>
-                    <div class="w-[589px] h-[272px] bg-white rounded-[10px]"></div>
-                </div>
-                <div class="w-[589px] py-[9px] bg-gray-900 rounded-[10px] justify-center items-center inline-flex">
-                    <div class="text-lime-300 text-[25px] font-medium font-['DM Sans']">Send</div>
-                </div>
-            </div>
+          <div class="inline-flex flex-col items-start justify-start">
+            <div class="text-gray-900 text-[141.14px] font-normal font-['Bebas Neue'] leading-[150.45px]">Get in Touch</div>
+            <div class="w-[465px] text-gray-900 text-[25px] font-normal font-['DM Sans']">If you are interested in my work or want to provide feedback about this website, I am open to exchanging ideas.</div>
+          </div>
+          <div class="py-2.5 flex-col justify-start items-start gap-3.5 inline-flex">
+            <form action="https://formspree.io/f/xoqgrpye" method="POST" @submit.prevent="handleSubmit" id="contact-form">
+              <div class="flex-col justify-start items-start gap-[5px] flex">
+                <label for="name" class="text-gray-900 text-[25px] font-bold font-['DM Sans']">Name</label>
+                <input id="name" name="name" type="text" class="w-[589px] h-[51px] text-black-blue bg-white rounded-[10px]" />
+              </div>
+              <div class="flex-col justify-start items-start gap-[5px] flex">
+                <label for="email" class="text-gray-900 text-[25px] font-bold font-['DM Sans']">Email</label>
+                <input id="email" name="_replyto" type="email" class="w-[589px] h-[51px] text-black-blue bg-white rounded-[10px]" />
+              </div>
+              <div class="flex-col justify-start items-start gap-[5px] flex">
+                <label for="message" class="text-gray-900 text-[25px] font-bold font-['DM Sans']">Message</label>
+                <textarea id="message" name="message" class="w-[589px] h-[272px] text-black-blue bg-white rounded-[10px]"></textarea>
+              </div>
+              <button type="submit" class="w-[589px] py-[9px] bg-gray-900 rounded-[10px] justify-center items-center inline-flex">
+                <span class="text-lime-300 text-[25px] font-medium font-['DM Sans']">Send</span>
+              </button>
+            </form>
+          </div>
         </div>
+      </div>
     </div>
-</div>
+  
+    <script>
+        export default {
+            methods: {
+                handleSubmit() {
+                    // Lógica de envío del formulario
+    
+                    // Simulando un tiempo de espera antes de mostrar la animación
+                    setTimeout(() => {
+                        // Agrega la clase de animación de entrada cuando se envía el formulario
+                        document.getElementById('contact-form')?.classList.add('animate-fadeIn');
+    
+                        // Elimina la clase de animación de entrada después de un tiempo para restablecerla
+                        setTimeout(() => {
+                            document.getElementById('contact-form')?.classList.remove('animate-fadeIn');
+                        }, 1000); // ajusta el tiempo al igual que la duración de la animación
+                    }, 1000); // ajusta el tiempo según sea necesario
+                }
+            }
+        }
+    </script>
+  
