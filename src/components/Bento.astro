@@ -1,105 +1,43 @@
----
-import BentoItem from "./BentoItem.astro"
----
-
-<div
-  class="bg-black-blue rounded-[10px] self-stretch shrink-0 h-[132px] relative overflow-hidden"
->
-  <div
-    class="text-white text-left font-['BebasNeue-Regular',_sans-serif] text-[74.52249908447266px] leading-[106.6%] font-normal absolute left-[45px] top-[calc(50%_-_33.21px)]"
-  >
-    Recent Projects
-  </div>
-  <button
-    class="flex flex-row gap-[7px] items-center justify-start absolute left-[1290.45px] top-[51.79px]"
-  >
-    <div
-      class="text-white text-left font-['DmSans-Bold',_sans-serif] text-[22.219900131225586px] font-bold relative"
-    >
-      See all
+<div>
+    <h2 class="mb-4 text-2xl font-bold">Recent Projects</h2>
+    <!-- Botón Ver más -->
+    <div class="text-right">
+      <a href="#" class="text-blue-600">Ver más</a>
     </div>
-    <img
-      class="shrink-0 w-[22px] h-[22px] relative overflow-visible"
-      src="arrow-right0.svg"
-    />
-  </button>
+    <div class="grid grid-cols-1 gap-4 md:grid-cols-3">
+      <!-- Proyecto 1 -->
+      <div class="col-span-1 md:col-span-1">
+        <div class="overflow-hidden rounded-lg shadow-lg bg-black-blue">
+          <img class="object-cover object-center w-full h-64" src="./tesla.png" alt="Proyecto 1">
+          <div class="p-4">
+            <h3 class="mb-2 text-xl font-medium">Proyecto 1</h3>
+            <h6 class="text-sm text-neon-green">Frontend</h6>
+            <p class="text-gray-300 ">Breve descripción del proyecto 1.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Proyecto 2 -->
+      <div class="col-span-1 md:col-span-1">
+        <div class="overflow-hidden rounded-lg shadow-lg bg-black-blue">
+          <img class="object-cover object-center w-full h-64" src="./grano.png" alt="Proyecto 2">
+          <div class="p-4">
+            <h3 class="mb-2 text-xl font-medium">Proyecto 2</h3>
+            <h6 class="text-sm text-neon-green">Frontend</h6>
+            <p class="text-gray-300">Breve descripción del proyecto 2.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Proyecto 3 -->
+      <div class="col-span-1 md:col-span-1">
+        <div class="overflow-hidden rounded-lg shadow-lg bg-black-blue">
+          <img class="object-cover object-center w-full h-64" src="imagen_proyecto_3.jpg" alt="Proyecto 3">
+          <div class="p-4">
+            <h3 class="mb-2 text-xl font-medium">Proyecto 3</h3>
+            <h6 class="text-sm text-neon-green">Frontend</h6>
+            <p class="text-gray-300">Breve descripción del proyecto 3.</p>
+          </div>
+        </div>
+      </div>
+    </div>
 </div>
-
-    
-<section
-  class={`
-    w-full max-w-[1400px]
-    grid lg:grid-col-10 auto-rows-[30rem] gap-4 
-    mx-auto p-6 md:p-12 lg:p-20
-    `}
->
-  <BentoItem
-    class="col-span-10 md:col-span-4"
-    title="Selección de Granos"
-    subtitle="Descubre una gama de sabores únicos provenientes de los rincones más selectos del mundo del café."
-  >
-  <div 
-  slot="image"
-  class="absolute top-0 bottom-0 left-0 w-full h-full duration-1000 ease-in-out bg-center bg-no-repeat bg-cover background transition-scale -z-10 bg-amber-900 opacity-90 bg-blend-luminosity group-hover:scale-110"
-  style="background-image: url('/granos.webp')"
->
-  </div>
-    <p slot="content"
-    class="max-w-xl text-base md:text-lg">
-      Descubre una gama de sabores únicos provenientes de los <strong
-        >rincones más selectos</strong
-      > del mundo del café.
-    </p>
-  </BentoItem>
-
-  <BentoItem
-    class="col-span-10 md:col-span-2"
-    title="Sabor Auténtico"
-    subtitle="Siente la esencia pura del café en cada sorbo, preparado con cuidado y amor por nuestros baristas expertos."
-  >
-  <div 
-  slot="image"
-  class="absolute top-0 bottom-0 left-0 w-full h-full duration-1000 ease-in-out bg-center bg-no-repeat bg-cover background transition-scale -z-10 bg-amber-900 opacity-90 bg-blend-luminosity group-hover:scale-110"
-  style="background-image: url('/cafe.webp')"
->
-  </div>
-    <p slot="content" class="max-w-xl text-base md:text-lg">
-      Siente la <strong>esencia pura</strong> del café en cada sorbo, preparado con
-      cuidado y amor por nuestros baristas expertos.
-    </p>
-  </BentoItem>
-
-  <BentoItem
-    class="col-span-10 md:col-span-2"
-    title="Experiencias Únicas"
-    subtitle="Sumérgete en un ambiente acogedor y vive momentos memorables mientras disfrutas de nuestro café artesanal y deliciosa repostería."
-  >
-  <div 
-  slot="image"
-  class="absolute top-0 bottom-0 left-0 w-full h-full duration-1000 ease-in-out bg-center bg-no-repeat bg-cover background transition-scale -z-10 bg-amber-900 opacity-90 bg-blend-luminosity group-hover:scale-110"
-  style="background-image: url('/molino.webp')"
->
-  </div>
-    <p slot="content"
-    class="max-w-xl text-base md:text-lg">
-      Sumérgete en un ambiente acogedor y vive momentos memorables mientras
-      disfrutas de nuestro café artesanal y <strong
-        >deliciosa repostería.</strong>
-    </p>
-  </BentoItem>
-
-  <BentoItem class="col-span-10 md:col-span-4" title="Pasión por el Café">
-  <div 
-  slot="image"
-  class="absolute top-0 bottom-0 left-0 w-full h-full duration-1000 ease-in-out bg-center bg-no-repeat bg-cover background transition-scale -z-10 bg-amber-900 opacity-90 bg-blend-luminosity group-hover:scale-110"
-  style="background-image: url('/pasion.jpeg')"
->
-  </div>
-    <p slot="content"
-    class="max-w-xl text-base md:text-lg">
-      Descubre la <strong>pasión</strong> que ponemos en cada taza, desde la cuidadosa
-      selección de granos hasta la preparación con esmero por nuestro equipo.
-    </p>
-  </BentoItem>
-</section>
   
