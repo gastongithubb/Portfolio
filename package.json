@@ -13,12 +13,16 @@
     "@astrojs/check": "^0.5.10",
     "@astrojs/tailwind": "^5.1.0",
     "@fontsource/bebas-neue": "^5.0.20",
-    "@types/vue": "^2.0.0",
+    "@fontsource/dm-sans": "^5.0.21",
+    "@types/swiper": "^6.0.0",
     "astro": "^4.6.3",
+    "swiper": "^11.1.1",
     "tailwindcss": "^3.4.3",
-    "typescript": "^5.4.5"
+    "typescript": "^5.4.5",
+    "vue": "^3.4.26"
   },
   "devDependencies": {
+    "@types/vue": "^2.0.0",
     "tailwindcss-animated": "^1.0.1"
   }
 }

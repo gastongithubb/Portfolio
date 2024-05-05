@@ -18,6 +18,8 @@ const { title, description } = Astro.props;
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
+		<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+		<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 		<title>{title}</title>
 		<slot name="preload" />
     	<ViewTransitions />
@@ -54,6 +56,13 @@ const { title, description } = Astro.props;
 			Bitstream Vera Sans Mono,
 			Courier New,
 			monospace;
+	}
+	p {
+		color:rgb(203, 201, 201);
+	}
+
+	strong {
+		color:#fff;
 	}
 	#landing-header {
       animation: blur linear both;
