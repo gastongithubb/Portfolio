@@ -1,25 +1,42 @@
 ---
-import BentoItem from "./BentoItem.astro"
+import BentoItem from "./BentoItem.astro";
 ---
 
 <section
   class={`
-    max-w-[1370px] h-full
+    max-w-[170px] h-full
     grid lg:grid-col-10 auto-rows-[30rem] gap-4 
     mx-auto p-6 md:p-12 lg:p-20
     `}
 >
   <BentoItem
-    class="top-0 w-[800px] h-full col-span-10 -left-[10%] md:col-span-5 bg-neon-green overflow-x-hidden "
+    class="top-0 w-[800px] -ml-[330px] h-auto col-span-10 -left-[10%] md:col-span-5 bg-neon-green overflow-x-hidden"
     title="About Me"
   >
-    <p slot="content"
-    class="max-w-xl text-base md:text-lg text-black-blue font-DmSans-Regular">
-    <p><strong>Una persona extrovertida, empática y con un espíritu autodidacta</strong></p>
+    <p
+      slot="content"
+      class="strong-info w-[750px] text-base md:text-lg text-black-blue font-DmSans-Regular"
+    >
 
-    <p>Soy alguien que se conecta fácilmente con las personas que lo rodean, creando relaciones sólidas basadas en la <strong>confianza</strong> y el <strong>compromiso</strong>. Me apasiona resolver problemas utilizando diversos campos del conocimiento y estoy en constante búsqueda de nuevas oportunidades para <strong>aprender</strong> y <strong>crecer</strong>.</p>
-      <a href="/AboutMe"><button class="px-4 py-2 text-lg rounded-md bg-dark-blue text-neon-green font-DmSans-Bold">More...</button></a>
-    </p>
+    Soy alguien que se conecta fácilmente con las personas que lo rodean, creando relaciones sólidas basadas en la <strong>confianza</strong> y el <strong>compromiso</strong>. 
+    Disfruto interactuar con otros y encontrar puntos en común que nos permitan colaborar de manera efectiva. 
+    Además, me esfuerzo por entender las perspectivas de los demás, lo que me permite ser un <strong>buen oyente</strong> y un <strong>compañero de equipo</strong> comprensivo.
+    Me apasiona resolver problemas utilizando diversos campos del conocimiento y estoy en constante búsqueda de nuevas oportunidades para <strong>aprender</strong> y <strong>crecer</strong>. 
+    Mi curiosidad innata me lleva a explorar diferentes áreas y a adquirir habilidades que pueden ser útiles en distintas situaciones. 
+    No temo enfrentar desafíos y siempre estoy dispuesto a <strong>adaptarme</strong> a nuevos entornos y tecnologías.
+    Considero que el aprendizaje continuo es fundamental para el desarrollo personal y profesional.<br>
     
+      <a href="/AboutMe"
+        ><button
+          class="px-4 py-2 mt-5 flex text-lg rounded-md bg-dark-blue text-neon-green font-DmSans-Bold hover:bg-opacity-25 hover:text-black-blue transition-colors"
+          >More...</button
+        ></a
+      >
+    </p>
   </BentoItem>
+  <style>
+    strong {
+      color: #161b22
+    }
+  </style>
 </section>
